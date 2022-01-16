@@ -3,8 +3,7 @@ const config = require("../settings.json")
 const Data = require("../models/taglıal")
 exports.execute = async (client, message, args) => {
   if (!message.member.roles.cache.has(config.registery) && !message.member.permissions.has("ADMINISTRATOR")) return message.channel.send("Yetkiniz Yeterli Değil")
-  let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-  let Db = await Data.findOne({ GuildId: message.guild.id, Member: message.member.id })
+  let Db = await Data.findOne({ GuildId: message.guild.id })
   let tag = new RegExp(config.tag)
   let x = Db && Db.tagalanlar ? Db.tagalanlar : []
   if (tag.test(member.user.username)) {
@@ -27,7 +26,7 @@ exports.execute = async (client, message, args) => {
   }
 }
 exports.conf = {
-  command: "taglı",
+  command: "tagaldır",
   description: "",
   aliases: []
 }

@@ -11,34 +11,32 @@ exports.execute = async (client, message, args) => {
   .setColor("RANDOM")
   let Db = await TaglıData.findOne({ GuildId: message.guild.id, Member: message.member.id })
   let Dbtwo = await OwnerData.findOne({ GuildId: message.guild.id, Member: message.member.id })
-   if(!member) return message.reply("false")
     if(Db === null ) {
       let comp = 15;
       message.channel.send({ embeds :[embed.setDescription(`${member} Mevcut İlerleminiz \`${Dbtwo.TotalReg}\` Kayıt Durumundasiniz 
   
       ${(await client.createBar(Dbtwo.TotalReg,comp,8)).toString()} Seviye Yükselmek İçin 
       
-      \`${comp - Dbtwo.TotalReg}\` Taglı Çekmen Gerekiyor
+      \`${comp - Dbtwo.TotalReg}\` Kayıt Etmen Gerek!
      
       Alıcağin Rol <@&${config.OnelevelTag}>`)]});
     }
-   if( Dbtwo && Db !== null ) {
-    let comp = 15;
-    message.channel.send({ embeds :[embed.setDescription(`${member} Mevcut İlerleminiz \`${Db.TotalTag}\` Taglı \`${Dbtwo.TotalReg}\` Kayıt Durumundasiniz 
+        if( Dbtwo && Db !== null ) {
+        let comp = 15;
+         message.channel.send({ embeds :[embed.setDescription(`${member} Mevcut İlerleminiz \`${Db.TotalTag}\` Taglı \`${Dbtwo.TotalReg}\` Kayıt Durumundasiniz 
 
-    ${(await client.createBar(Db.TotalTag,comp,8)).toString()} Seviye Yükselmek İçin 
+         ${(await client.createBar(Db.TotalTag,comp,8)).toString()} Seviye Yükselmek İçin 
     
-    \`${comp - Db.TotalTag}\` Taglı Çekmen Gerekiyor
+        \`${comp - Db.TotalTag}\` Taglı Çekmen Gerekiyor
    
-    Alıcağin Rol <@&${config.OnelevelTag}>
+        Alıcağin Rol <@&${config.OnelevelTag}>
 
-    ${(await client.createBar(Dbtwo.TotalReg,comp,8)).toString()}  Seviye Yükselmek İçin 
+        ${(await client.createBar(Dbtwo.TotalReg,comp,8)).toString()}  Seviye Yükselmek İçin 
     
-    \`${comp - Dbtwo.TotalReg}\` Kişi Kayıt Etmen Gerekiyor
+        \`${comp - Dbtwo.TotalReg}\` Kişi Kayıt Etmen Gerekiyor
 
-    Alıcağin Rol <@&${config.Onelevelreg}> `)]});
+        Alıcağin Rol <@&${config.Onelevelreg}> `)]});
    } 
-
 
 
 
