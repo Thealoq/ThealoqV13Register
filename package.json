@@ -1,0 +1,19 @@
+{
+  "name": "v13",
+  "version": "1.0.0",
+  "main": "thealoq.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node thealoq.js"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.7.5",
+    "discord.js": "^13.6.0",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^6.1.6",
+    "path": "^0.12.7"
+  }
+}
