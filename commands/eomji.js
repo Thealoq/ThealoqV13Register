@@ -18,6 +18,7 @@ exports.execute = async (client, message, args) => {
   let Sayı6 = "https://cdn.discordapp.com/emojis/928885709052465152.gif?size=44&quality=lossless";
   let Sayı7 = "https://cdn.discordapp.com/emojis/928885708817588226.gif?size=44&quality=lossless";
   let Sayı8 = "https://cdn.discordapp.com/emojis/928885709056671764.gif?size=44&quality=lossless";
+  let sayı9 ="https://cdn.discordapp.com/emojis/931966132007608330.gif?size=96&quality=lossless"
   let empty = "https://cdn.discordapp.com/emojis/931967080624971816.webp?size=96&quality=lossless";
   let emptyend = "https://cdn.discordapp.com/emojis/931967080675287091.webp?size=96&quality=lossless";
   let fill = "https://cdn.discordapp.com/emojis/931967080595587102.gif?size=96&quality=lossless";
