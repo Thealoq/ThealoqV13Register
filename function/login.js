@@ -14,12 +14,10 @@ class Login {
         return client;
     }
     static  async connectMongo(url) {
-        mongoose.connect(url, {
+        mongoose.set('strictQuery', true).connect(url, {
             useNewUrlParser: true,
-            autoIndex: true,
-            connectTimeoutMS: 10000,
-            family: 4
-        }).then(console.log("Mongoya Bağlandı")).catch(e => console.error(e));
+            useUnifiedTopology: true,
+          }).then(e => console.log("Mongoya Bağlandı"))
     }
     static getMongo() {
         return mongoose
